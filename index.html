@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>فرن شيخ البلد الحاج نفادي – أطفيح</title>
+<meta name="description" content="فرن شيخ البلد الحاج نفادي في عزبة فاضل، أطفيح، الجيزة. صرف الخبز المدعم بالبطاقة التموينية وتوفير الحصة المقررة من الدقيق، كل يوم من 5 إلى 8 صباحًا.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"فرن شيخ البلد الحاج نفادي","telephone":"+201229858550","address":{"@type":"PostalAddress","streetAddress":"عزبة فاضل","addressLocality":"أطفيح","addressRegion":"الجيزة","addressCountry":"EG"},"openingHours":"Mo-Su 05:00-08:00"}
+</script>
+<style>
+/* ===== 1. Tokens ===== */
+:root{
+  --cream:#F3E3C3; --sand:#EBD5A8; --ink:#2B1A0F; --brown:#6B3E1F; --gold:#C98A3B; --red:#B5442C;
+  --bg:#F3E3C3; --bg2:#EBD5A8; --tx:#2B1A0F; --mut:#6B3E1F; --ln:rgba(43,26,15,.2);
+  --serif:"Aref Ruqaa","Amiri",serif; --sans:"Tajawal","Segoe UI",Tahoma,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E140D;--bg2:#2A1C12;--tx:#F3E3C3;--mut:#D9B27A;--ln:rgba(243,227,195,.22)}}
+:root[data-theme="dark"]{--bg:#1E140D;--bg2:#2A1C12;--tx:#F3E3C3;--mut:#D9B27A;--ln:rgba(243,227,195,.22)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--sans);line-height:1.8;font-size:1.05rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--ink);z-index:30}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ===== 2. Header ===== */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:.6rem 1.2rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--serif);font-size:1.6rem;line-height:1}
+.logo svg{width:20px;height:38px;color:var(--gold)}
+.top .btn{padding:.5rem 1.1rem}
+
+/* ===== 3. Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--gold);transition:transform .15s,background .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.95)}
+.btn.main{background:var(--gold);color:var(--ink)}
+.btn.main:hover{background:#E0A24F}
+.btn.line{color:inherit;border-color:currentColor}
+.btn.line:hover{background:rgba(201,138,59,.18)}
+.btn svg{width:1.15em;height:1.15em;transition:transform .25s}
+.btn:hover svg{transform:rotate(-12deg)}
+
+/* ===== 4. Hero: the oven mouth ===== */
+.hero{background:radial-gradient(120% 90% at 30% 100%,#4a2814 0%,var(--ink) 60%);color:var(--cream);overflow:hidden;position:relative}
+.hero .in{max-width:1100px;margin:0 auto;padding:3rem 1.4rem 4rem;display:grid;gap:2rem;align-items:center;grid-template-columns:1.05fr .95fr}
+.hero h1{font-family:var(--serif);font-size:clamp(3rem,9vw,5.6rem);line-height:1.15;margin:0}
+.hero .who{font-family:var(--serif);font-size:clamp(1.4rem,4vw,2rem);color:var(--gold);margin:.2rem 0 1.2rem}
+.hero p{margin:.4rem 0;font-size:1.2rem;max-width:30ch}
+.badge{display:inline-flex;align-items:center;gap:.6rem;margin:1.2rem 0;padding:.45rem 1rem;border:1px solid rgba(243,227,195,.35);border-radius:999px;font-weight:500}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:#9a8a75}
+.badge.open .dot{background:#7bd88f;animation:pulse 1.8s infinite}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.oven{position:relative;max-width:420px;width:100%;margin-inline:auto;--mx:0;--my:0}
+.oven svg{width:100%;height:auto;display:block;overflow:visible}
+.oven .layer{transform:translate(calc(var(--mx)*10px),calc(var(--my)*6px))}
+.glow{animation:pulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.loaf{animation:bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.loaf:nth-of-type(2){animation-delay:-1.7s}.loaf:nth-of-type(3){animation-delay:-3.1s}
+.steam path{fill:none;stroke:var(--cream);stroke-width:5;stroke-linecap:round;opacity:0;animation:steam 5s ease-out infinite}
+.steam path:nth-child(2){animation-delay:1.6s}.steam path:nth-child(3){animation-delay:3.2s}
+.ember{position:absolute;bottom:34%;width:5px;height:5px;border-radius:50%;background:#FFB347;opacity:0;animation:ember 6s linear infinite}
+.hero .a{animation:rise .6s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--d,0s)*.6)}
+
+/* ===== 5. Sections ===== */
+section{padding:4rem 1.4rem}
+.wrap{max-width:900px;margin:0 auto}
+h2{font-family:var(--serif);font-size:clamp(2rem,6vw,3rem);margin:0 0 1.5rem;line-height:1.3}
+dl{margin:0}
+.row{display:grid;grid-template-columns:8rem 1fr;gap:1rem;padding:1.3rem 0;border-bottom:1px solid var(--ln);align-items:baseline}
+.row dt{color:var(--mut);font-weight:500}
+.row dd{margin:0;font-size:clamp(1.3rem,4vw,1.9rem);font-weight:700;line-height:1.5}
+.alt{background:var(--bg2)}
+.phone{display:inline-block;font-family:var(--serif);font-size:clamp(2.6rem,10vw,4.4rem);text-decoration:none;direction:ltr;line-height:1.2;transition:color .25s}
+.phone:hover{color:var(--red)}
+.note{color:var(--mut);margin:.5rem 0 1.5rem}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:2rem 1rem 6rem}
+.sway{display:flex;justify-content:center;gap:.9rem;color:var(--gold);margin-bottom:1rem}
+.sway svg{width:18px;height:54px;transform-origin:50% 100%;animation:sway 4s ease-in-out infinite}
+.sway svg:nth-child(2){animation-delay:-1.3s;height:64px}.sway svg:nth-child(3){animation-delay:-2.4s}
+.bar{display:none}
+
+/* ===== 6. Scroll reveal (content stays visible without JS) ===== */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+/* Info rows: wipe in from the reading side (right to left); phone number: soft scale */
+.js .row.rv{opacity:1;transform:none}
+.js .row.rv dt,.js .row.rv dd{clip-path:inset(0 0 0 100%);transition:clip-path .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .row.rv.in dt,.js .row.rv.in dd{clip-path:inset(-10px)}
+.js .phone.rv{transform:scale(.94)}
+.js .phone.rv.in{transform:none}
+
+/* ===== 7. Keyframes ===== */
+@keyframes pulse{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes steam{0%{transform:translateY(24px);opacity:0}30%{opacity:.55}100%{transform:translateY(-46px);opacity:0}}
+@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}}
+@keyframes ember{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(var(--x),-230px);opacity:0}}
+
+/* Ambient motion pauses while its section is off-screen (toggled by JS) */
+.off,.off *{animation-play-state:paused!important}
+
+/* ===== 8. Responsive ===== */
+@media (max-width:760px){
+  .hero .in{grid-template-columns:1fr;padding-top:2rem}
+  .oven{max-width:300px;order:-1}
+  .row{grid-template-columns:1fr;gap:.2rem}
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;position:fixed;bottom:0;inset-inline:0;z-index:20;padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom,0px));background:var(--ink)}
+  .bar .btn{justify-content:center}
+  .top .btn{display:none}
+  .ember{display:none}
+  .loaf{animation:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  .steam path{opacity:.35}
+  .js .row.rv dt,.js .row.rv dd{clip-path:none}
+}
+</style>
+</head>
+<body>
+<!-- Shared icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wheat" viewBox="0 0 20 60"><path d="M10 58V14" stroke="currentColor" stroke-width="2" fill="none"/><g fill="currentColor"><ellipse cx="10" cy="7" rx="3" ry="6"/><ellipse cx="5" cy="18" rx="3" ry="6" transform="rotate(-25 5 18)"/><ellipse cx="15" cy="18" rx="3" ry="6" transform="rotate(25 15 18)"/><ellipse cx="5" cy="31" rx="3" ry="6" transform="rotate(-25 5 31)"/><ellipse cx="15" cy="31" rx="3" ry="6" transform="rotate(25 15 31)"/><ellipse cx="6" cy="44" rx="3" ry="5.5" transform="rotate(-25 6 44)"/><ellipse cx="14" cy="44" rx="3" ry="5.5" transform="rotate(25 14 44)"/></g></symbol>
+  <symbol id="ph" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.5.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.55 3.5a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500.2.600.800 2 .800 2.100.1.100.1.300 0 .500-.1.200-.2.300-.3.500-.2.200-.3.300-.1.600.200.300.800 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.400.3.100.5.100.7-.1.200-.2.800-.9 1-1.200.2-.3.400-.3.700-.2l2 1c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></symbol>
+</svg>
+
+<header class="top">
+  <a class="logo" href="#top" aria-label="فرن شيخ البلد"><svg aria-hidden="true"><use href="#wheat"/></svg><span>شيخ البلد</span></a>
+  <a class="btn main" href="tel:+201229858550"><svg aria-hidden="true"><use href="#ph"/></svg>اتصل بالفرن</a>
+</header>
+
+<main id="top">
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="in">
+    <div>
+      <h1 class="a">فرن شيخ البلد</h1>
+      <div class="who a" style="--d:.15s">الحاج نفادي</div>
+      <p class="a" style="--d:.3s">عيش بلدي مدعم بالبطاقة التموينية، في عزبة فاضل بأطفيح.</p>
+      <div class="badge a" id="st" style="--d:.45s"><span class="dot"></span><span id="stt">كل يوم من 5 إلى 8 صباحًا</span></div>
+      <div class="cta a" style="--d:.6s">
+        <a class="btn main" href="tel:+201229858550"><svg aria-hidden="true"><use href="#ph"/></svg>اتصل</a>
+        <a class="btn line" href="https://wa.me/201229858550" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>واتساب</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=عزبة+فاضل+أطفيح" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#pin"/></svg>الاتجاهات</a>
+      </div>
+    </div>
+
+    <!-- Oven mouth illustration (replace with real photos when available) -->
+    <div class="oven" id="oven" role="img" aria-label="رسم لفم فرن طوب مضيء وبداخله أرغفة عيش بلدي">
+      <svg viewBox="0 0 400 360">
+        <defs>
+          <radialGradient id="fire" cx="50%" cy="85%" r="75%"><stop offset="0" stop-color="#FFC15E"/><stop offset=".5" stop-color="#D9692F"/><stop offset="1" stop-color="#4a1e0d"/></radialGradient>
+          <pattern id="brick" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#6B3E1F"/><path d="M0 .5H40M0 10.5H40M20 .5V10.5M0 10.5V20M40 10.5V20" stroke="#2B1A0F" stroke-opacity=".45" fill="none"/></pattern>
+        </defs>
+        <path d="M30 350V170a170 170 0 0 1 340 0v180z" fill="url(#brick)"/>
+        <path d="M80 350V180a120 120 0 0 1 240 0v170z" fill="#1a0d06"/>
+        <g class="layer">
+          <path class="glow" d="M92 350V182a108 108 0 0 1 216 0v168z" fill="url(#fire)"/>
+          <g class="loaf"><ellipse cx="150" cy="318" rx="46" ry="15" fill="#C98A3B"/><circle cx="135" cy="314" r="3" fill="#8a5a22"/><circle cx="158" cy="320" r="2.500" fill="#8a5a22"/><circle cx="170" cy="313" r="2" fill="#8a5a22"/></g>
+          <g class="loaf"><ellipse cx="250" cy="322" rx="46" ry="15" fill="#D69A4A"/><circle cx="238" cy="318" r="3" fill="#8a5a22"/><circle cx="262" cy="324" r="2.500" fill="#8a5a22"/></g>
+          <g class="loaf"><ellipse cx="200" cy="292" rx="50" ry="16" fill="#C98A3B"/><circle cx="185" cy="289" r="3" fill="#8a5a22"/><circle cx="208" cy="294" r="2.500" fill="#8a5a22"/><circle cx="222" cy="288" r="2" fill="#8a5a22"/></g>
+        </g>
+        <g class="steam" transform="translate(0 30)"><path d="M160 150q-14-18 0-34t0-34"/><path d="M200 140q-14-18 0-34t0-34"/><path d="M240 150q-14-18 0-34t0-34"/></g>
+      </svg>
+      <span class="ember" style="inset-inline-start:34%;--x:-14px"></span>
+      <span class="ember" style="inset-inline-start:46%;--x:18px;animation-delay:-2s"></span>
+      <span class="ember" style="inset-inline-start:56%;--x:-10px;animation-delay:-3.800s"></span>
+      <span class="ember" style="inset-inline-start:64%;--x:12px;animation-delay:-1s"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Info ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="rv">معلومات الفرن</h2>
+    <dl>
+      <div class="row rv"><dt>المنتج</dt><dd>عيش بلدي مدعم بالبطاقة التموينية</dd></div>
+      <div class="row rv" style="--d:.04s"><dt>الخدمات</dt><dd>صرف الخبز المدعم، وتوفير الحصة المقررة من الدقيق</dd></div>
+      <div class="row rv" style="--d:.08s"><dt>المواعيد</dt><dd>كل يوم من 5 إلى 8 صباحًا</dd></div>
+      <div class="row rv" style="--d:.16s"><dt>المكان</dt><dd>عزبة فاضل، أطفيح، الجيزة</dd></div>
+      <div class="row rv" style="--d:.24s"><dt>الاستلام</dt><dd>من الفرن مباشرة، ولا يوجد توصيل</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2 class="rv">للاستفسار عن الفرن</h2>
+    <a class="phone rv" href="tel:+201229858550" style="--d:.08s">012 2985 8550</a>
+    <p class="note rv" style="--d:.14s">نفس الرقم للاتصال والواتساب.</p>
+    <div class="cta rv" style="--d:.2s">
+      <a class="btn main" href="tel:+201229858550"><svg aria-hidden="true"><use href="#ph"/></svg>اتصل الآن</a>
+      <a class="btn line" href="https://wa.me/201229858550" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>راسلنا على واتساب</a>
+      <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=عزبة+فاضل+أطفيح" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#pin"/></svg>الاتجاهات على الخريطة</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="sway" aria-hidden="true"><svg><use href="#wheat"/></svg><svg><use href="#wheat"/></svg><svg><use href="#wheat"/></svg></div>
+  <div>فرن شيخ البلد الحاج نفادي، عزبة فاضل، أطفيح، الجيزة</div>
+</footer>
+
+<!-- Sticky call bar (mobile) -->
+<nav class="bar" aria-label="تواصل سريع">
+  <a class="btn main" href="tel:+201229858550"><svg aria-hidden="true"><use href="#ph"/></svg>اتصل</a>
+  <a class="btn line" style="color:var(--cream)" href="https://wa.me/201229858550" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>واتساب</a>
+</nav>
+
+<script>
+/* ===== Behavior: all optional, page works without JS ===== */
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1. Open / closed status (Cairo time, 05:00 to 08:00)
+  function status(){
+    var st=document.getElementById('st'), tx=document.getElementById('stt');
+    try{
+      var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Cairo',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+      var h=+p.find(function(x){return x.type==='hour'}).value % 24, m=+p.find(function(x){return x.type==='minute'}).value, t=h*60+m;
+      if(t>=300&&t<480){st.classList.add('open');tx.textContent='الفرن مفتوح الآن حتى 8 صباحًا';}
+      else{st.classList.remove('open');tx.textContent=t<300?'يفتح اليوم الساعة 5 صباحًا':'أغلق اليوم، يفتح غدًا الساعة 5 صباحًا';}
+    }catch(e){}
+  }
+  status(); setInterval(status,60000);
+
+  // 2. Scroll reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  // 2b. Pause ambient motion while the hero or footer is off-screen
+  if('IntersectionObserver' in window){
+    var po=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('off',!e.isIntersecting)})});
+    document.querySelectorAll('.hero,footer').forEach(function(el){po.observe(el)});
+  }
+
+  // 3. Mouse-reactive oven glow layer (fine pointers only, eased with rAF)
+  var oven=document.getElementById('oven');
+  if(!reduce && matchMedia('(pointer:fine)').matches){
+    var tx=0,ty=0,cx=0,cy=0,run=false;
+    function loop(){cx+=(tx-cx)*.08;cy+=(ty-cy)*.08;oven.style.setProperty('--mx',cx.toFixed(3));oven.style.setProperty('--my',cy.toFixed(3));
+      if(Math.abs(tx-cx)>.001||Math.abs(ty-cy)>.001){requestAnimationFrame(loop)}else{run=false}}
+    addEventListener('pointermove',function(e){tx=e.clientX/innerWidth*2-1;ty=e.clientY/innerHeight*2-1;if(!run){run=true;requestAnimationFrame(loop)}},{passive:true});
+  }
+})();
+</script>
+</body>
+</html>
